@@ -1,0 +1,22 @@
+h1{
+    color:darkblue;
+    background-color: skyblue;
+    text-align: center;
+}
+.conatiner{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 500px; 
+    width: 500px;
+    height: 300px;
+    background-color:rgb(186, 230, 231);
+}
+.btn{
+    margin-top: 15px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10%;
+    color: black;
+    border: 1px solid blueviolet;
+}
+
