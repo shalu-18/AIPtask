@@ -10,15 +10,15 @@
     </div>
   <br>
 
-  <div *ngIf="!loginform.get('username')?.valid && (!loginform.get('username')?.dirty ||!loginform.get('username')?.touched)">
-      <div *ngIf="!loginform.get('password')?.valid && (!loginform.get('password')?.dirty ||!loginform.get('password')?.touched)">
+  <!-- <div *ngIf="!loginform.get('username')?.valid && !loginform.get('username')?.touched && (!loginform.get('username')?.dirty )">
+      <div *ngIf="!loginform.get('password')?.valid  &&!loginform.get('password')?.touched && (!loginform.get('password')?.dirty )">
       
     <div  [hidden]="!loginform.get('username')?.errors?.required" style="color: red;">
        All fild details should be required
     </div>
     </div>
-    </div>
+    </div> -->
 
-  <button type="submit" class="btn" (click)="setdata()" [disabled]="!loginform.valid" [routerLink]="['/customer']">Login</button>
+  <button type="submit" class="btn"  class=" btn btn-primary" (click)="setdata()" [disabled]="!loginform.valid" [routerLink]="['/customer']">Login</button>
 
 </div>

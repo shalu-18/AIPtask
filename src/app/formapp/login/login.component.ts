@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl ,Validators} from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ServicessService } from 'src/app/services/servicess.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { ServicessService } from 'src/app/services/servicess.service';
 })
 export class LoginComponent implements OnInit {
   servicess: any;
-  constructor(public fb: FormBuilder, private service: ServicessService) { }
+  constructor(public fb: FormBuilder, private service: ServicessService, private router: Router) { }
   userdata!:any; 
   // usserdata = {
   //   fname: '',
@@ -30,8 +31,9 @@ export class LoginComponent implements OnInit {
   }
 setdata(){
     this.service.setdata(this.loginform.value).subscribe((_response: any) =>{
-        
-        // this.router.navigateByUrl('/customer');   
+        localStorage.setItem('token', 'bmF6aW1AbmltYXBpbmZvdGVjaC5jb206dGVzdEAxMjM')
+        // this.router.navigateByUrl('/customer'); 
+        this.router.navigate(['/customer']);
         
     });
    

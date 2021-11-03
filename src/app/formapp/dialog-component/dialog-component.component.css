@@ -1,0 +1,14 @@
+.conatiner{
+     margin: auto;
+    text-align: center;
+    background-color:#dddddd;
+}
+
+.btn{
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: #091353;
+    border-radius: 10%;
+}

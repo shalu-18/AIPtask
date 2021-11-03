@@ -1,14 +1,46 @@
-<div class="container">
-<h1>This is Customer page</h1>
-<!-- <div>
-<table>
-    <tr>
-    <th>username</th>
-    <th>password</th>
-</tr>
-</table>
-</div> -->
-    <h5>Status:{{myData?.Status}}</h5>
-    <h5>Message:{{myData?.Message}}</h5>
+<nav class="navbar navbar-expand-lg" style="background-color: #091353; ">
   
+    <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link"  routerLink ="/customer" style="color: white; font-weight: 900px;">Customer</a>
+              </li>
+              </ul>
+              </div>
+              <div class="row align-items-end">
+                 <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link"  (click)="logout()" style="cursor: pointer; color: white; font-weight: 900px;">logout</a>
+                    </li>
+                    </ul>
 </div>
+    
+</nav>
+<!-- <h1>This is Customer page</h1> -->
+<!-- <tr>
+    <h3>Status:{{myData?.Status}}</h3>
+    <h3>Message:{{myData?.Message}}</h3>
+    <h3>Records:{{myData?.data.TotalRecords}}</h3>
+  </tr> -->
+  
+  
+  <button  class="btn" (click)="openDialog()" style="float: right;  margin-bottom: 20px; position: fixed; top:60px; right:10px; ">Adduser</button>
+<table class="styled-table" style="margin: auto; margin-top: 30px; font-weight: 100;">
+    <thead>
+    <th style="font-weight: 100px;">Name</th>
+    <th>Number</th>
+    </thead>
+    <tbody>
+       
+        <tr *ngFor="let data of myData?.data?.Leads">
+           
+            <td>{{data?.LeadName}}</td>
+            <td>{{data?.MobileNo}}</td>
+        </tr>  
+
+        </tbody>
+
+ 
+
+</table>
+    
