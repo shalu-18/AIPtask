@@ -20,7 +20,7 @@ constructor(private http: HttpClient) { }
     // });
     const user = {
       emailOrMobileNo: "9892870026",
-      otp: 7171
+      otp: 9234
     }
     return this.http.post("https://testffc.nimapinfotech.com/api/Account/LoginWithOTP",{
       emailOrMobileNo: "9892870026",

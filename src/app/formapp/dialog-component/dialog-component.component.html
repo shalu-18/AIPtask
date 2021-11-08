@@ -1,8 +1,21 @@
-<form [formGroup]="leads"  class="conatiner">
-    <label for="fname">LeadName:</label><br>
-    <input type="text" id="fname" name="fname" value="John" formControlName="LeadName"><br>
-    <label for="lname">MobileNo:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe" formControlName="MobileNo"><br><br>
-    <button   class="btn" role="button" (click)="addmylead()" >Submit</button>
+<form [formGroup]="leads"  class="conatiner" >
+    <div  class= "container">
+        <div class="col">
+    <label for="fname">LeadName:</label>
+    <input class="row align-items-center" type="text" id="fname" name="fname" value="John" formControlName="LeadName">
+    </div>
+    
+    <div class="col">
+    <label for="lname">MobileNo:</label>
+    <input class="row align-items-center" type="text" id="lname" name="lname" value="Doe" formControlName="MobileNo">
+ </div>
+    
+ <div style="float: right; margin-top:20px;">
+    
+    <button class="btn" role="button" (click)="addmylead()" >Submit</button>
+    <button class="btn1" role="button" (click)="close()" >Close</button>
+    </div>
+    </div>
+
   </form> 
   

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup ,FormBuilder} from '@angular/forms';
 import { ServicessService } from 'src/app/services/servicess.service';
@@ -31,9 +32,13 @@ constructor(public fb: FormBuilder,  public service:  ServicessService,
    this.service.addLead(this.leads.value).subscribe(
      res=>{
        console.log(res);
-       this.dialogRef.close();
+      
      }
    )
-  
+  }
+    close() {
+    this.dialogRef.close();
+  }
 
-}}
+
+}
